@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
 
       body: SafeArea(
@@ -25,8 +26,16 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
+          Align( 
+            alignment: const Alignment(1,-0.2), 
+          child: SvgPicture.asset( 
+              'assets/sweater.svg',
+              width: 370,
+            ),
+          ),
+
             Positioned(
-              left: 20,
+              left: 70,
               bottom: 20,
               child: Column (
                 mainAxisSize: MainAxisSize.min,
