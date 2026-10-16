@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromARGB(255, 215, 206, 206),
 
       body: SafeArea(
         child: Stack(
@@ -37,22 +37,26 @@ class HomePage extends StatelessWidget {
             Positioned(
               left: 70,
               bottom: 20,
-              child: Column (
-                mainAxisSize: MainAxisSize.min,
+              child: Row (
+                mainAxisAlignment: MainAxisAlignment.center,
+                spacing: 170,
               children: [
-                Icon(
-                Icons.house, 
-                color: Colors.black,
-                size: 40,
+                Column (
+                 mainAxisSize: MainAxisSize.min,
+                children : [
+                Icon(Icons.house, color: Colors.black, size:40,),
+                SizedBox(height: 5),
+                Text('Home', style: TextStyle(color:Colors.black, fontSize:10,)),
+                ]
               ),
-              SizedBox(height: 5),
-                Text (
-                  'Home',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 10,
-                    ),
-                  ),
+              Column ( 
+                mainAxisSize: MainAxisSize.min, 
+                children: [
+                  Icon(Icons.settings, color: Colors.black, size: 40,),
+                  SizedBox(height: 5),
+                  Text( 'Settings', style: TextStyle(color:Colors.black, fontSize:10,)),
+                ],
+              )
                 ]
               ),
             ),
