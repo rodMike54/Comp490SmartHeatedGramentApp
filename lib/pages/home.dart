@@ -34,6 +34,29 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
+        Align ( 
+          alignment: const Alignment(-0.01,0.5),
+          child: OutlinedButton(
+            onPressed: () {
+          },
+          style: OutlinedButton.styleFrom( 
+            side: const BorderSide(color: Colors.black, width: 2),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          child: Text( 
+            'Connect Device',
+            style : TextStyle ( 
+              color: Colors.black, 
+              fontSize: 24,
+             )
+            ),
+          ),
+        ),
+        
+        
             Positioned(
               left: 70,
               bottom: 20,
