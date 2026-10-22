@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'connectdevice.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -38,6 +39,10 @@ class HomePage extends StatelessWidget {
           alignment: const Alignment(-0.01,0.5),
           child: OutlinedButton(
             onPressed: () {
+              Navigator.push (
+                context,
+                MaterialPageRoute(builder: (context) => const connectdevice()),
+              );
           },
           style: OutlinedButton.styleFrom( 
             side: const BorderSide(color: Colors.black, width: 2),
@@ -58,32 +63,42 @@ class HomePage extends StatelessWidget {
         
         
             Positioned(
-              left: 70,
+              left: 0,
+              right: 0,
               bottom: 20,
               child: Row (
                 mainAxisAlignment: MainAxisAlignment.center,
                 spacing: 170,
               children: [
-                Column (
+                TextButton(
+                onPressed: () {
+                },
+                child: const Column (
                  mainAxisSize: MainAxisSize.min,
                 children : [
                 Icon(Icons.house, color: Colors.black, size:40,),
                 SizedBox(height: 5),
                 Text('Home', style: TextStyle(color:Colors.black, fontSize:10,)),
-                ]
+                ],
               ),
-              Column ( 
+            ),
+
+            TextButton (
+              onPressed: () { 
+              },
+              child: const Column ( 
                 mainAxisSize: MainAxisSize.min, 
                 children: [
                   Icon(Icons.settings, color: Colors.black, size: 40,),
                   SizedBox(height: 5),
                   Text( 'Settings', style: TextStyle(color:Colors.black, fontSize:10,)),
                 ],
-              )
-                ]
               ),
             ),
-          ]
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
