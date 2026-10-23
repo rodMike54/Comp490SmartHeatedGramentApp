@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               Navigator.push (
                 context,
-                MaterialPageRoute(builder: (context) => const connectdevice()),
+                MaterialPageRoute(builder: (context) => const ConnectDevice()),
               );
           },
           style: OutlinedButton.styleFrom( 
@@ -60,47 +60,10 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        
-        
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: 20,
-              child: Row (
-                mainAxisAlignment: MainAxisAlignment.center,
-                spacing: 170,
-              children: [
-                TextButton(
-                onPressed: () {
-                },
-                child: const Column (
-                 mainAxisSize: MainAxisSize.min,
-                children : [
-                Icon(Icons.house, color: Colors.black, size:40,),
-                SizedBox(height: 5),
-                Text('Home', style: TextStyle(color:Colors.black, fontSize:10,)),
-                ],
-              ),
-            ),
 
-            TextButton (
-              onPressed: () { 
-              },
-              child: const Column ( 
-                mainAxisSize: MainAxisSize.min, 
-                children: [
-                  Icon(Icons.settings, color: Colors.black, size: 40,),
-                  SizedBox(height: 5),
-                  Text( 'Settings', style: TextStyle(color:Colors.black, fontSize:10,)),
                 ],
               ),
             ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
